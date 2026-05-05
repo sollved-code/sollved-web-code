@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="prob-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c4a8"/>
+      <stop offset="40%" stop-color="#f2d4b0"/>
+      <stop offset="80%" stop-color="#f4e4cc"/>
+      <stop offset="100%" stop-color="#ede0c8"/>
+    </linearGradient>
+    <linearGradient id="prob-l1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9aa8a4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8898a0" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="prob-l2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7a8c90" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5e7878" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="prob-l3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4f6b66"/>
+      <stop offset="100%" stop-color="#3a554f"/>
+    </linearGradient>
+    <linearGradient id="prob-l4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e463e"/>
+      <stop offset="100%" stop-color="#1f3328"/>
+    </linearGradient>
+    <filter id="prob-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="900" fill="url(#prob-sky)"/>
+
+  <!-- Far layer 1 (most distant) -->
+  <path d="M 0,440 L 60,420 L 140,435 L 220,400 L 320,420 L 420,395 L 540,415 L 660,388 L 780,410 L 900,385 L 1020,408 L 1140,392 L 1200,402 L 1200,520 L 0,520 Z"
+        fill="url(#prob-l1)"/>
+
+  <!-- Layer 2 -->
+  <path d="M 0,520 L 80,495 L 180,515 L 290,478 L 410,500 L 530,468 L 660,492 L 790,460 L 920,488 L 1050,455 L 1180,478 L 1200,478 L 1200,620 L 0,620 Z"
+        fill="url(#prob-l2)"/>
+
+  <!-- Layer 3 -->
+  <path d="M 0,620 L 100,590 L 220,615 L 340,575 L 470,602 L 600,565 L 740,592 L 880,555 L 1020,585 L 1160,548 L 1200,562 L 1200,740 L 0,740 Z"
+        fill="url(#prob-l3)"/>
+
+  <!-- Foreground layer 4 -->
+  <path d="M 0,740 L 120,710 L 260,735 L 400,695 L 560,725 L 720,685 L 880,715 L 1040,675 L 1200,705 L 1200,900 L 0,900 Z"
+        fill="url(#prob-l4)"/>
+
+  <!-- Tiny tree silhouettes on foreground -->
+  <g fill="#0d1c14" opacity="0.85">
+    <path d="M 240,738 L 238,710 L 234,712 L 240,704 L 246,712 L 242,710 L 244,738 Z"/>
+    <path d="M 720,728 L 718,696 L 712,700 L 720,688 L 728,700 L 722,698 L 724,728 Z"/>
+    <path d="M 1020,718 L 1018,690 L 1014,693 L 1020,684 L 1026,693 L 1022,690 L 1024,718 Z"/>
+  </g>
+
+  <!-- Grain -->
+  <rect width="1200" height="900" filter="url(#prob-grain)"/>
+</svg>

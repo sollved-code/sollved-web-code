@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="con-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1812"/>
+      <stop offset="50%" stop-color="#0f2418"/>
+      <stop offset="100%" stop-color="#1a3a26"/>
+    </linearGradient>
+    <radialGradient id="con-glow" cx="78%" cy="78%" r="55%">
+      <stop offset="0%" stop-color="#26684f" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#1a4438" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1a4438" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="con-mtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1c14"/>
+      <stop offset="100%" stop-color="#06120c"/>
+    </linearGradient>
+    <filter id="con-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="13"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="900" fill="url(#con-sky)"/>
+  <!-- Atmospheric glow -->
+  <rect width="1600" height="900" fill="url(#con-glow)"/>
+
+  <!-- Distant mountain silhouette -->
+  <path d="M 0,550 L 80,520 L 200,540 L 340,495 L 480,525 L 640,485 L 800,515 L 960,478 L 1120,508 L 1280,470 L 1440,500 L 1600,475 L 1600,650 L 0,650 Z"
+        fill="url(#con-mtn)"/>
+
+  <!-- Subtle stars / lime accents -->
+  <g fill="#c5d956">
+    <circle cx="220" cy="120" r="1.5" opacity="0.85"/>
+    <circle cx="380" cy="180" r="1" opacity="0.6"/>
+    <circle cx="560" cy="100" r="1.8" opacity="0.9"/>
+    <circle cx="740" cy="220" r="1" opacity="0.55"/>
+    <circle cx="920" cy="140" r="1.4" opacity="0.75"/>
+    <circle cx="1180" cy="180" r="1.2" opacity="0.7"/>
+    <circle cx="1380" cy="100" r="1.6" opacity="0.85"/>
+  </g>
+
+  <!-- Eucalyptus trees foreground -->
+  <!-- Left tree group -->
+  <g transform="translate(180,750)">
+    <line x1="0" y1="0" x2="4" y2="-280" stroke="#040b06" stroke-width="9" stroke-linecap="round"/>
+    <line x1="4" y1="-280" x2="-25" y2="-340" stroke="#040b06" stroke-width="5"/>
+    <line x1="4" y1="-280" x2="32" y2="-330" stroke="#040b06" stroke-width="5"/>
+    <ellipse cx="-22" cy="-350" rx="48" ry="36" fill="#040b06"/>
+    <ellipse cx="35" cy="-340" rx="55" ry="40" fill="#040b06"/>
+    <ellipse cx="6" cy="-370" rx="42" ry="30" fill="#040b06"/>
+  </g>
+
+  <!-- Center-left tree -->
+  <g transform="translate(420,770)" opacity="0.92">
+    <line x1="0" y1="0" x2="-2" y2="-220" stroke="#06140d" stroke-width="7" stroke-linecap="round"/>
+    <line x1="-2" y1="-220" x2="-22" y2="-265" stroke="#06140d" stroke-width="4"/>
+    <line x1="-2" y1="-220" x2="20" y2="-260" stroke="#06140d" stroke-width="4"/>
+    <ellipse cx="-22" cy="-275" rx="38" ry="28" fill="#06140d"/>
+    <ellipse cx="22" cy="-272" rx="42" ry="30" fill="#06140d"/>
+  </g>
+
+  <!-- Right tree (large) -->
+  <g transform="translate(1280,770)">
+    <line x1="0" y1="0" x2="-8" y2="-300" stroke="#020806" stroke-width="11" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="6" y2="-310" stroke="#020806" stroke-width="9" stroke-linecap="round"/>
+    <line x1="-8" y1="-300" x2="-45" y2="-380" stroke="#020806" stroke-width="6"/>
+    <line x1="6" y1="-310" x2="40" y2="-385" stroke="#020806" stroke-width="6"/>
+    <ellipse cx="-45" cy="-390" rx="60" ry="44" fill="#020806"/>
+    <ellipse cx="42" cy="-395" rx="68" ry="48" fill="#020806"/>
+    <ellipse cx="-2" cy="-415" rx="55" ry="38" fill="#020806"/>
+    <ellipse cx="55" cy="-360" rx="45" ry="32" fill="#020806"/>
+  </g>
+
+  <!-- Far right small tree -->
+  <g transform="translate(1500,755)" opacity="0.85">
+    <line x1="0" y1="0" x2="0" y2="-180" stroke="#0a1810" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="-18" cy="-200" rx="32" ry="24" fill="#0a1810"/>
+    <ellipse cx="20" cy="-195" rx="36" ry="26" fill="#0a1810"/>
+  </g>
+
+  <!-- Foreground ground -->
+  <rect x="0" y="750" width="1600" height="150" fill="#020604"/>
+
+  <!-- Grain -->
+  <rect width="1600" height="900" filter="url(#con-grain)"/>
+</svg>
